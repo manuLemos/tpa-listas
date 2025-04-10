@@ -13,7 +13,7 @@ public class No<T> {
         return prox;
     }
     public void setProx(No<T> prox) { this.prox = prox; }
-    public Object getValor() {
+    public T getValor() {
         return valor;
     }
     public void setValor(T valor) {
