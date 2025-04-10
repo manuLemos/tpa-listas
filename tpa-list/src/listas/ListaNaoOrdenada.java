@@ -24,4 +24,15 @@ public class ListaNaoOrdenada<T> {
         this.qtd++;
     }
 
+    public T pesquisar(T valor){
+        No<T> aux = this.prim;
+
+        while(aux != null){
+            if(valor.equals(aux.getValor())){
+                return aux.getValor();
+            }
+            aux = aux.getProx();
+        }
+        return null;
+    }
 }
