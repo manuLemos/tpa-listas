@@ -44,4 +44,17 @@ public class ListaOrdenada <T> {
         }
         this.qtd++;
     }
+
+    public String toString() {
+        String retorno = "[ ";
+        No<T> aux = this.prim;
+        while (aux!=null) {
+            retorno += aux.getValor();
+            if(aux!=this.ult){
+                retorno += ", ";
+            }
+            aux = aux.getProx();
+        }
+        return retorno+" ]";
+    }
 }
