@@ -30,4 +30,9 @@ public class Aluno {
     public void setNota(float nota) {
         this.nota = nota;
     }
+
+    @Override
+    public String toString() {
+        return nome + " - " + matricula + " - " + nota;
+    }
 }
