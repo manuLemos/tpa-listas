@@ -3,9 +3,9 @@ package teste;
 public class Aluno {
     private String nome;
     private int matricula;
-    private double nota;
+    private float nota;
 
-    public Aluno(String nome, int matricula, double nota) {
+    public Aluno(String nome, int matricula, float nota) {
         this.nome = nome;
         this.matricula = matricula;
         this.nota = nota;
@@ -27,7 +27,7 @@ public class Aluno {
         return nota;
     }
 
-    public void setNota(double nota) {
+    public void setNota(float nota) {
         this.nota = nota;
     }
 }
