@@ -32,7 +32,17 @@ public class Aluno {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Aluno aluno = (Aluno) obj;
+        return this.matricula == aluno.matricula;
+    }
+
+
+    @Override
     public String toString() {
-        return nome + " - " + matricula + " - " + nota;
+        return "Nome: "+ nome + "\nMatrícula: " + matricula + "\nNota: " + nota;
     }
 }

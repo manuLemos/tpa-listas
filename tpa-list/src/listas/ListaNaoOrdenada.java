@@ -1,9 +1,13 @@
 package listas;
 
-public class ListaNaoOrdenada<T> extends Lista<T>{
+public class ListaNaoOrdenada<T> {
+    private int qtd;
+    private No<T> prim,ult;
 
     public ListaNaoOrdenada() {
-        super();
+        this.qtd = 0;
+        this.prim = null;
+        this.ult = null;
     }
 
     public void adicionar(T novoValor) {
