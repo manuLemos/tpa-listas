@@ -44,16 +44,24 @@ public class ListaOrdenada <T> {
         this.qtd++;
     }
 
+
     public T pesquisar(T valor){
         No<T> aux = this.prim;
 
-        while(aux != null){
-            if(valor.equals(aux.getValor())){
+        while(aux != null) {
+            int comparacao = comparador.compare(aux.getValor(), valor);
+
+            if (comparacao == 0) {
                 return aux.getValor();
+            } else if (comparacao > 0) {
+                // O valor atual é maior que o procurado - interrompe a busca
+                return null;
             }
+
             aux = aux.getProx();
         }
-        return null;
+
+        return null; // Chegou ao fim e não encontrou
     }
 
     public String toString() {
