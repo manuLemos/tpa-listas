@@ -18,14 +18,14 @@ public class Main {
 
         // Medindo o tempo de inserção dos elementos na lista NÃO ordenada
         long inicioNaoOrd = System.nanoTime();
-        leitor.lerNaoOrdenada("alunosOrdenados.txt",listaNaoOrdenada); // <-- Arquivo que irá alimentar a lista
+        leitor.lerNaoOrdenada("tpa-list/src/alunosOrdenados.txt",listaNaoOrdenada); // <-- Arquivo que irá alimentar a lista
         long fimNaoOrd = System.nanoTime();
         double tempoNaoOrd = (fimNaoOrd - inicioNaoOrd);
         System.out.printf("Tempo inserção não ordenada: %.6f segundos%n",tempoNaoOrd/1000000000);
 
         // Medindo o tempo de inserção dos elementos na lista ORDENADA
         long inicioOrd = System.nanoTime();
-        leitor.lerOrdenada("alunosOrdenados.txt", listaOrdenada); // <-- Arquivo que irá alimentar a lista
+        leitor.lerOrdenada("tpa-list/src/alunosOrdenados.txt", listaOrdenada); // <-- Arquivo que irá alimentar a lista
         long fimOrd = System.nanoTime();
         double tempoOrd = (fimOrd - inicioOrd);
         System.out.printf("Tempo inserção ordenada: %.6f segundos%n", tempoOrd / 1000000000);
